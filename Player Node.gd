@@ -22,4 +22,4 @@ func _physics_process(delta):
 	
 	move_and_slide(velocity)
 	
-	velocity.x = lerp(velocity.x,0,0.1)
+	velocity.x = lerp(velocity.x, 0, delta*4)
