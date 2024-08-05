@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ball_64i23.png-efa6152655ff9639935f5543445afc03.stex"
+path="res://.import/ball_64i23.png-6fe3fe05b8e41272fcd05722d49ba469.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ball_64i/ball_64i23.png"
-dest_files=[ "res://.import/ball_64i23.png-efa6152655ff9639935f5543445afc03.stex" ]
+source_file="res://ball/ball_64i/ball_64i23.png"
+dest_files=[ "res://.import/ball_64i23.png-6fe3fe05b8e41272fcd05722d49ba469.stex" ]
 
 [params]
 
