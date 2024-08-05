@@ -18,6 +18,18 @@ config/icon="res://icon.png"
 
 common/drop_mouse_on_gui_input_disabled=true
 
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
+texture_3d={
+"flags/filter": false
+}
+texture_array={
+"flags/filter": false
+}
+
 [input]
 
 left_arrow={
