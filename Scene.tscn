@@ -18,17 +18,25 @@ position = Vector2( 512, 576 )
 scale = Vector2( 2, 2 )
 
 [node name="Platform" parent="Platform Node" instance=ExtResource( 4 )]
-position = Vector2( -236, -92 )
+position = Vector2( -224, -92 )
+scale = Vector2( 1.434, 1.434 )
 
 [node name="Platform17" parent="Platform Node" instance=ExtResource( 4 )]
-position = Vector2( -137, -124 )
+position = Vector2( -92, -124 )
+scale = Vector2( 1.213, 1.213 )
 
 [node name="Platform18" parent="Platform Node" instance=ExtResource( 4 )]
-position = Vector2( -35, -156 )
+position = Vector2( 8, -140 )
+scale = Vector2( 0.914, 0.914 )
+
+[node name="Platform19" parent="Platform Node" instance=ExtResource( 4 )]
+position = Vector2( -496, -788 )
+scale = Vector2( 10, 100 )
+
+[node name="Platform20" parent="Platform Node" instance=ExtResource( 4 )]
+position = Vector2( 496, -788 )
+scale = Vector2( 10, 100 )
 
 [node name="Player Node" parent="." instance=ExtResource( 2 )]
 position = Vector2( 512, 464 )
 scale = Vector2( 3, 3 )
-__meta__ = {
-"_edit_group_": true
-}
