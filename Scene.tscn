@@ -13,6 +13,7 @@ texture = ExtResource( 3 )
 expand = true
 
 [node name="Platform Node" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 2, 2 )
 
 [node name="Player Node" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 534 )
+scale = Vector2( 1.5, 1.5 )
