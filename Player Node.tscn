@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://ball_64i/ball_64i0.png" type="Texture" id=1]
 [ext_resource path="res://Player Node.gd" type="Script" id=2]
@@ -25,15 +25,23 @@
 [ext_resource path="res://ball_64i/ball_64i14.png" type="Texture" id=23]
 [ext_resource path="res://ball_64i/ball_64i15.png" type="Texture" id=24]
 [ext_resource path="res://ball_64i/ball_64i18.png" type="Texture" id=25]
+[ext_resource path="res://ball_64i_ jump/ball_64j2.png" type="Texture" id=26]
+[ext_resource path="res://ball_64i_ jump/ball_64j1.png" type="Texture" id=27]
+[ext_resource path="res://ball_64i_ jump/ball_64j0.png" type="Texture" id=28]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 26.0
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "Jump-up",
 "speed": 24.0
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 15 ), ExtResource( 21 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 3 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 1 ) ],
@@ -59,4 +67,4 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "Idle"
+animation = "Jump-up"
