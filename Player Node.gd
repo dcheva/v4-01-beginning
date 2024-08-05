@@ -16,9 +16,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if Input.is_action_pressed("left_arrow"):
+		$Sprite.play("Roll-right")
 		velocity.x = -speed
-	if Input.is_action_pressed("right_arrow"):
+	elif Input.is_action_pressed("right_arrow"):
+		$Sprite.play("Roll-right")
 		velocity.x = speed
+	else:
+		$Sprite.play("Roll-right")
 	
 	move_and_slide(velocity)
 	
