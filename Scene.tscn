@@ -15,4 +15,4 @@ expand = true
 [node name="Platform Node" parent="." instance=ExtResource( 1 )]
 
 [node name="Player Node" parent="." instance=ExtResource( 2 )]
-position = Vector2( 512, 538 )
+position = Vector2( 512, 534 )
