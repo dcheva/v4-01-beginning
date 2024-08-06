@@ -6,7 +6,7 @@ onready var _sprite = $Sprite
 var velocity = Vector2(0,0)
 
 var speed = 300
-var jump_speed = -1000
+var jump_speed = -600
 var gravity = 2000
 
 func _physics_process(_delta):
@@ -22,11 +22,11 @@ func _physics_process(_delta):
 		$Sprite.flip_h = false
 		velocity.x = speed
 	else:
-		  _animation_player.play("Idle")
+		_animation_player.play("Idle")
 		
 	if Input.is_action_pressed("jump") or not is_on_floor():
 		_animation_player.play("Jump")
 		
 	velocity.y = velocity.y + gravity * (_delta)
-	velocity.x = lerp(velocity.x, 0, _delta * 4)
 	move_and_slide(velocity, Vector2.UP)
+	velocity.x = lerp(velocity.x, 0, 0.1)
