@@ -24,6 +24,10 @@ func _physics_process(_delta):
 	else:
 		_animation_player.play("Idle")
 		
+	# speed gap fix
+	if is_on_floor() and velocity.y > speed:
+		velocity.y = speed
+		
 	if Input.is_action_pressed("jump") or not is_on_floor():
 		_animation_player.play("Jump")
 		
