@@ -4,7 +4,7 @@
 [ext_resource path="res://Player Node.tscn" type="PackedScene" id=2]
 [ext_resource path="res://props.png" type="Texture" id=3]
 [ext_resource path="res://back.png" type="Texture" id=4]
-[ext_resource path="res://Coin Node.tscn" type="PackedScene" id=5]
+[ext_resource path="res://coins/Silver Coin.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1462,26 +1462,16 @@ drag_margin_top = 0.5
 drag_margin_right = 0.5
 drag_margin_bottom = 0.5
 
-[node name="Coin Node" parent="." instance=ExtResource( 5 )]
-position = Vector2( 552, -2 )
-scale = Vector2( 2, 2 )
+[node name="Coins" type="Node" parent="."]
 
-[node name="Coin Node4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 960, 480 )
-scale = Vector2( 2, 2 )
+[node name="Silver Coin" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 496, -16 )
+scale = Vector2( 1.5, 1.5 )
 
-[node name="Coin Node5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1024, 480 )
-scale = Vector2( 2, 2 )
+[node name="Silver Coin2" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 552, -48 )
+scale = Vector2( 1.5, 1.5 )
 
-[node name="Coin Node6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1088, 480 )
-scale = Vector2( 2, 2 )
-
-[node name="Coin Node2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 617, 16 )
-scale = Vector2( 2, 2 )
-
-[node name="Coin Node3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 488, 16 )
-scale = Vector2( 2, 2 )
+[node name="Silver Coin3" parent="Coins" instance=ExtResource( 5 )]
+position = Vector2( 608, -16 )
+scale = Vector2( 1.5, 1.5 )

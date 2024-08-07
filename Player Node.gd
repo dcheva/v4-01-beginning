@@ -14,6 +14,14 @@ func score_count():
 	score = score + 1
 
 func _physics_process(_delta):
+	
+	# bounce simulation 
+	if is_on_ceiling():
+		velocity.y = -velocity.y 
+	if is_on_wall():
+		velocity.x = -velocity.x
+	
+	# controls
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_speed
 		_animation_player.play("Jump")
@@ -35,6 +43,7 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("jump") or not is_on_floor():
 		_animation_player.play("Jump")
 		
+	# process ohysics
 	velocity.y = velocity.y + gravity * (_delta)
 	move_and_slide(velocity, Vector2.UP, true)
 	velocity.x = lerp(velocity.x, 0, 0.1)
