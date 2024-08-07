@@ -51,3 +51,5 @@ hframes = 5
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Coin-rotate = SubResource( 56 )
 anims/RESET = SubResource( 57 )
+
+[connection signal="body_entered" from="." to="." method="_on_Coin_Node_body_entered"]

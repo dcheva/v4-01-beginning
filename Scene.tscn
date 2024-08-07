@@ -1448,8 +1448,30 @@ tile_data = PoolIntArray( -589833, -1610612717, 0, -589832, -1610612717, 0, -589
 position = Vector2( 506, 480 )
 scale = Vector2( 3, 3 )
 
+[node name="Camera2D" type="Camera2D" parent="Player Node"]
+offset = Vector2( 0.5, 0.5 )
+current = true
+limit_left = -128
+limit_top = -320
+limit_right = 1320
+limit_bottom = 664
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+
 [node name="Coin Node" parent="." instance=ExtResource( 5 )]
 position = Vector2( 552, -2 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin Node4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 960, 480 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin Node5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1024, 480 )
+scale = Vector2( 2, 2 )
+
+[node name="Coin Node6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1088, 480 )
 scale = Vector2( 2, 2 )
 
 [node name="Coin Node2" parent="." instance=ExtResource( 5 )]

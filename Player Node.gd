@@ -8,6 +8,10 @@ var velocity = Vector2(0,0)
 var speed = 300
 var jump_speed = -1000
 var gravity = 3000
+var score = 0
+
+func score_count():
+	score = score + 1
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
