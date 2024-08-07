@@ -40,8 +40,11 @@ TEST*.xml
 Thumbs.db
 
 # Applications
+*.7z
+*.zip
 *.app
 *.exe
+*.pck
 *.war
 
 # Large media files
