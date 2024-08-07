@@ -296,7 +296,7 @@ points = PoolVector2Array( 0, 16, 0, 16, 0, 0, 32, 16 )
 6/texture = ExtResource( 1 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 208, 16, 32, 16 )
+6/region = Rect2( 208, 16, 32, 32 )
 6/tile_mode = 0
 6/occluder_offset = Vector2( 0, 0 )
 6/navigation_offset = Vector2( 0, 0 )
@@ -317,7 +317,7 @@ points = PoolVector2Array( 0, 16, 0, 16, 0, 0, 32, 16 )
 7/texture = ExtResource( 1 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 256, 16, 32, 16 )
+7/region = Rect2( 256, 16, 32, 32 )
 7/tile_mode = 0
 7/occluder_offset = Vector2( 0, 0 )
 7/navigation_offset = Vector2( 0, 0 )
@@ -1449,7 +1449,7 @@ position = Vector2( 506, 480 )
 scale = Vector2( 3, 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Player Node"]
-offset = Vector2( 0.5, 0.5 )
+offset = Vector2( 1, 1 )
 current = true
 limit_left = -128
 limit_top = -320
@@ -1457,6 +1457,10 @@ limit_right = 1320
 limit_bottom = 664
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+drag_margin_left = 0.5
+drag_margin_top = 0.5
+drag_margin_right = 0.5
+drag_margin_bottom = 0.5
 
 [node name="Coin Node" parent="." instance=ExtResource( 5 )]
 position = Vector2( 552, -2 )
