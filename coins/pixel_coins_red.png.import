@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pixel_coins_red.png-24f0bf89828bc9d4744245a54af204cb.stex"
+path="res://.import/pixel_coins_red.png-bea8156d49b09d8136c4114788b1d90e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel_coins_red.png"
-dest_files=[ "res://.import/pixel_coins_red.png-24f0bf89828bc9d4744245a54af204cb.stex" ]
+source_file="res://coins/pixel_coins_red.png"
+dest_files=[ "res://.import/pixel_coins_red.png-bea8156d49b09d8136c4114788b1d90e.stex" ]
 
 [params]
 
