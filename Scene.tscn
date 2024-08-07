@@ -1424,6 +1424,17 @@ points = PoolVector2Array( 0, 16, 0, 16, 0, 0, 32, 16 )
 
 [node name="Game Level" type="Node2D"]
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1536, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 480, 160 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+flip_h = true
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0, -2 )
 scale = Vector2( 2, 2 )
@@ -1439,7 +1450,7 @@ scale = Vector2( 3, 3 )
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 current = true
 limit_left = -128
-limit_top = -144
+limit_top = -284
 limit_right = 1344
 limit_bottom = 664
 drag_margin_h_enabled = true
@@ -1448,13 +1459,3 @@ drag_margin_left = 0.5
 drag_margin_top = 0.5
 drag_margin_right = 0.5
 drag_margin_bottom = 0.5
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 1536, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 480, 160 )
-scale = Vector2( 4, 4 )
-texture = ExtResource( 4 )
