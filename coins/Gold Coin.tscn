@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://coins/pixel_coins_silver.png" type="Texture" id=1]
-[ext_resource path="res://Coin Node.gd" type="Script" id=2]
+[ext_resource path="res://coins/pixel_coins_gold.png" type="Texture" id=1]
+[ext_resource path="res://coins/Gold Coin Node.gd" type="Script" id=2]
 
 [sub_resource type="CircleShape2D" id=55]
 
@@ -37,7 +37,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 
-[node name="Silver Coin Node" type="Area2D"]
+[node name="Gold Coin Node" type="Area2D"]
 position = Vector2( 512, 0 )
 script = ExtResource( 2 )
 

@@ -10,8 +10,9 @@ var jump_speed = -1000
 var gravity = 3000
 var score = 0
 
-func score_count():
-	score = score + 1
+func score_count(count = 1):
+	score = score + count
+	prints("Score: ", score)
 
 func _physics_process(_delta):
 	
@@ -46,4 +47,4 @@ func _physics_process(_delta):
 	# process ohysics
 	velocity.y = velocity.y + gravity * (_delta)
 	move_and_slide(velocity, Vector2.UP, true)
-	velocity.x = lerp(velocity.x, 0, 0.1)
+	velocity.x = lerp(velocity.x, 0, _delta*10)
