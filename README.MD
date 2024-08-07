@@ -3,3 +3,4 @@
 - Change Foxy player images to created Ball
 - Ready to continue at "Jump Animation"
 - Continue 7. Building the Game World
+- Continue 8. Counting Wins
