@@ -1535,3 +1535,7 @@ position = Vector2( 992, -48 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="Oposum Node" parent="." instance=ExtResource( 8 )]
+position = Vector2( 288, 82 )
+__meta__ = {
+"_edit_group_": true
+}

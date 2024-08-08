@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://sunnyland/oposum.png" type="Texture" id=1]
 [ext_resource path="res://Oposum Node.gd" type="Script" id=2]
 
-[sub_resource type="RectangleShape2D" id=58]
-extents = Vector2( 41.4703, 40 )
+[sub_resource type="RectangleShape2D" id=60]
+extents = Vector2( 40, 20 )
 
 [sub_resource type="Animation" id=56]
 resource_name = "Oposun walk"
@@ -62,19 +62,19 @@ tracks/2/keys = {
 "values": [ Vector2( 3, 0 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=59]
+extents = Vector2( 48, 28 )
+
 [node name="Oposum Node" type="KinematicBody2D"]
 position = Vector2( 288, 87 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -12, 13 )
-scale = Vector2( 1.061, 0.7 )
-shape = SubResource( 58 )
+position = Vector2( -8, 13 )
+shape = SubResource( 60 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 5 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
 hframes = 6
@@ -88,3 +88,11 @@ anims/RESET = SubResource( 57 )
 position = Vector2( -48, 41 )
 enabled = true
 cast_to = Vector2( 0, 64 )
+
+[node name="CollisionChecker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionChecker"]
+position = Vector2( -8, 13 )
+shape = SubResource( 59 )
+
+[connection signal="body_entered" from="CollisionChecker" to="." method="_on_CollisionChecker_body_entered"]
