@@ -67,6 +67,8 @@ extents = Vector2( 48, 28 )
 
 [node name="Oposum Node" type="KinematicBody2D"]
 position = Vector2( 288, 87 )
+collision_layer = 32
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
