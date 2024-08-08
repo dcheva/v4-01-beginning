@@ -3,7 +3,6 @@ extends KinematicBody2D
 var velocity = Vector2(0,0)
 var speed = 100
 var direction = -1
-var lives = 3
 
 func _physics_process(_delta):
 	velocity.x = speed * direction
@@ -22,7 +21,4 @@ func _physics_process(_delta):
 
 func _on_CollisionChecker_body_entered(_body):
 	print("Bounced enemy")
-	lives -= 1
-	prints("Lives: ", lives)
-	if(lives == 0):      
-		get_tree().change_scene("res://Scene.tscn")
+	_body.lives_count()

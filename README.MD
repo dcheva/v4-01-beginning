@@ -7,3 +7,6 @@
 - Adding Enemies
 - Detecting Ledges with a Raycast
 - Collision Layer and Collision Mask
+- Changing Scenes
+-- Score and life counters tested, level triggers works fine
+## Part IV Game Enhancements and Export
