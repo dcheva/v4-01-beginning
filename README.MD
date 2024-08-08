@@ -6,3 +6,4 @@
 - Continue 8. Counting Wins
 - Adding Enemies
 - Detecting Ledges with a Raycast
+- Collision Layer and Collision Mask
