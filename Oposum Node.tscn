@@ -83,3 +83,8 @@ frame = 3
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Oposun walk" = SubResource( 56 )
 anims/RESET = SubResource( 57 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( -48, 41 )
+enabled = true
+cast_to = Vector2( 0, 64 )
