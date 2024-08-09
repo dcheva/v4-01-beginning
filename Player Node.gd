@@ -15,6 +15,7 @@ var level_finished = false
 signal silver_coin_collected
 signal gold_coin_collected
 signal red_coin_collected
+signal lives_count
 
 func _physics_process(_delta):
 	
@@ -53,8 +54,6 @@ func _physics_process(_delta):
 
 # score counter
 func score_count(coin = 'silver'):
-	var count
-	
 	match coin:
 		'silver':
 			score = score +  1
@@ -67,11 +66,9 @@ func score_count(coin = 'silver'):
 			emit_signal("red_coin_collected")
 	
 # lives counter
-func lives_count(count = -1):
-	lives = lives + count
-	prints("Lives: ", lives)
-	if(lives <= 0):      
-		get_tree().change_scene("res://Scene.tscn")
+func hit():
+	lives -= 1
+	emit_signal("lives_count")
 
 # level finished signal
 func _on_Level_Area_body_entered(_body):

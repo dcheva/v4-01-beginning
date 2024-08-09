@@ -20,5 +20,4 @@ func _physics_process(_delta):
 		$RayCast2D.position.x *= -1
 
 func _on_CollisionChecker_body_entered(_body):
-	print("Bounced enemy")
-	_body.lives_count()
+	_body.hit()
