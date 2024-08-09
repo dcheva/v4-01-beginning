@@ -1431,7 +1431,7 @@ points = PoolVector2Array( 0, 16, 0, 16, 0, 0, 32, 16 )
 extents = Vector2( 17, 28 )
 
 [sub_resource type="DynamicFont" id=56]
-size = 64
+size = 80
 font_data = ExtResource( 9 )
 
 [node name="Game Level" type="Node2D"]
@@ -1558,15 +1558,26 @@ shape = SubResource( 55 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 16.0
+margin_top = -16.0
+margin_right = 331.0
+margin_bottom = 96.0
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 24.0
-margin_top = 82.0
-margin_right = 366.0
-margin_bottom = 141.0
-custom_colors/font_color = Color( 0.411765, 0.247059, 0.333333, 1 )
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
+margin_left = 12.0
+margin_top = -8.0
+margin_right = 354.0
+margin_bottom = 118.0
+custom_colors/font_color = Color( 1, 0.282353, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 1, 1, 0.498039 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 1
 custom_fonts/font = SubResource( 56 )
 text = "score"
 
