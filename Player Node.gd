@@ -18,6 +18,9 @@ signal gold_coin_collected
 signal red_coin_collected
 signal lives_count
 
+func _ready():
+	$Blood.hide()
+
 func _physics_process(_delta):
 	
 	# bounce simulation 
@@ -53,7 +56,7 @@ func _physics_process(_delta):
 	move_and_slide(velocity, Vector2.UP, true)
 	velocity.x = lerp(velocity.x, 0, _delta*10)
 
-# score counter
+# score counter signals
 func score_count(coin = 'silver'):
 	match coin:
 		'silver':
@@ -66,13 +69,19 @@ func score_count(coin = 'silver'):
 			score = score + 20
 			emit_signal("red_coin_collected")
 	
-# lives counter
+# lives counter signal
 func hit():
 	lives -= 1
-	emit_signal("lives_count")
+	$Blood.show()
+	$Timer.start()
 
-# level finished signal
+# hurt timer
+func _on_Timer_timeout():
+	$Blood.hide()
+	emit_signal("lives_count")
+	
+# level finished
 func _on_Level_Area_body_entered(_body):
 	if level_finished:
 		print("Level finished with score: %s,Lives: %s" % [score, lives])
-		get_tree().change_scene("res://Scene.tscn") 
+		get_tree().change_scene("res://Scene.tscn")

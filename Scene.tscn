@@ -8,9 +8,9 @@
 [ext_resource path="res://coins/Gold Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://coins/Red Coin.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Oposum Node.tscn" type="PackedScene" id=8]
-[ext_resource path="res://GUI/fonts/Baloo2-Medium.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://GUI/fonts/Kenney Thick.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://CanvasScript.gd" type="Script" id=10]
-[ext_resource path="res://live.png" type="Texture" id=11]
+[ext_resource path="res://sunnyland/live.png" type="Texture" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1433,7 +1433,7 @@ points = PoolVector2Array( 0, 16, 0, 16, 0, 0, 32, 16 )
 extents = Vector2( 17, 28 )
 
 [sub_resource type="DynamicFont" id=56]
-size = 60
+size = 32
 font_data = ExtResource( 9 )
 
 [node name="Game Level" type="Node2D"]
@@ -1588,9 +1588,9 @@ texture = ExtResource( 11 )
 expand = true
 
 [node name="Score" type="Label" parent="CanvasLayer"]
-margin_left = 28.0
+margin_left = 24.0
 margin_top = -8.0
-margin_right = 370.0
+margin_right = 184.0
 margin_bottom = 87.0
 custom_colors/font_color = Color( 1, 0.282353, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 0.498039 )
@@ -1598,20 +1598,21 @@ custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_constants/shadow_as_outline = 1
 custom_fonts/font = SubResource( 56 )
-text = "score:"
+text = "score"
+valign = 1
 
 [node name="ScoreValue" type="Label" parent="CanvasLayer"]
-margin_left = 114.0
-margin_top = -2.0
-margin_right = 259.0
-margin_bottom = 93.0
+margin_left = 107.0
+margin_top = -8.0
+margin_right = 252.0
+margin_bottom = 87.0
 custom_colors/font_color = Color( 1, 0.282353, 0, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 0.498039 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_constants/shadow_as_outline = 1
 custom_fonts/font = SubResource( 56 )
-text = "00"
+text = "0"
 align = 2
 valign = 1
 
