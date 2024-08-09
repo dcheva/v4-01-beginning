@@ -3,6 +3,8 @@ extends CanvasLayer
 var score = 0
 var lives = 0
 
+signal game_over
+
 func _ready():
 	$ScoreValue.text = String(score)
 	
@@ -24,8 +26,7 @@ func _update_hud_life():
 			$Heart3.hide()
 			$Heart2.hide()
 			$Heart1.hide()
-			print("Game over!")
-			get_tree().change_scene("res://Scene.tscn") 
+			emit_signal("game_over")
 
 func _on_Player_Node_silver_coin_collected():
 	_update_hud_score()

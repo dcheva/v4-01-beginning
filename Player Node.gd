@@ -12,6 +12,7 @@ var level_finished = false
 
 var score = 0
 var lives = 3
+var disabled = false
 
 signal silver_coin_collected
 signal gold_coin_collected
@@ -71,16 +72,20 @@ func score_count(coin = 'silver'):
 	
 # Hurt hit bumper
 func hit(dx):
-	velocity.x = 2 * dx * speed
-	velocity.y = -2 * speed
-	lives -= 1
-	$Blood.show()
-	$Timer.start()
+	print(disabled)
+	if disabled == false:
+		velocity.x = 2 * dx * speed
+		velocity.y = -2 * speed
+		lives -= 1
+		emit_signal("lives_count")
+		$Blood.show()
+		disabled = true
+		$Timer.start()
 
 # hurt timer
 func _on_Timer_timeout():
+	disabled = false
 	$Blood.hide()
-	emit_signal("lives_count")
 	
 # level finished
 func _on_Level_Area_body_entered(_body):
