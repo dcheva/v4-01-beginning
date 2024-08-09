@@ -10,3 +10,4 @@
 - Changing Scenes
 -- Score and life counters tested, level triggers works fine
 ## Part IV Game Enhancements and Export
+- Start 9. Game GUI

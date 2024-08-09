@@ -17,8 +17,8 @@ func _physics_process(_delta):
 	# bounce simulation 
 	if is_on_ceiling():
 		velocity.y = -velocity.y 
-	if is_on_wall():
-		velocity.x = -velocity.x
+	#if is_on_wall():
+	#	velocity.x = -velocity.x
 	
 	# controls
 	if Input.is_action_just_pressed("jump") and is_on_floor():
