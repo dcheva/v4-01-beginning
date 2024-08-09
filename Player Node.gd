@@ -52,7 +52,20 @@ func _physics_process(_delta):
 	velocity.x = lerp(velocity.x, 0, _delta*10)
 
 # score counter
-func score_count(count = 1):
+func score_count(coin = 'silver'):
+	var count
+	
+	match coin:
+		'silver':
+			count = 1
+			emit_signal("silver_coin_collected")
+		'gold':
+			count = 3
+			emit_signal("gold_coin_collected")
+		'red':
+			count = 20
+			emit_signal("red_coin_collected")
+			
 	score = score + count
 	prints("Score: ", score)
 	
