@@ -11,3 +11,5 @@
 -- Score and life counters tested, level triggers works fine
 ## Part IV Game Enhancements and Export
 - Start 9. Game GUI
+- Emitting signals from a Coins collection
+- Displaying the Player’s Lives
