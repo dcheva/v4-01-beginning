@@ -57,17 +57,14 @@ func score_count(coin = 'silver'):
 	
 	match coin:
 		'silver':
-			count = 1
+			score = score +  1
 			emit_signal("silver_coin_collected")
 		'gold':
-			count = 3
+			score = score +  3
 			emit_signal("gold_coin_collected")
 		'red':
-			count = 20
+			score = score + 20
 			emit_signal("red_coin_collected")
-			
-	score = score + count
-	prints("Score: ", score)
 	
 # lives counter
 func lives_count(count = -1):

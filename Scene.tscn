@@ -1594,4 +1594,7 @@ text = "00"
 align = 2
 valign = 1
 
+[connection signal="gold_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_gold_coin_collected"]
+[connection signal="red_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_red_coin_collected"]
+[connection signal="silver_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_silver_coin_collected"]
 [connection signal="body_entered" from="Level Area" to="Player Node" method="_on_Level_Area_body_entered"]
