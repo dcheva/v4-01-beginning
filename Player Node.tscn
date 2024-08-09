@@ -106,7 +106,7 @@ anims/Run = SubResource( 5 )
 wait_time = 0.2
 
 [node name="Blood" type="Sprite" parent="."]
-position = Vector2( -4, 5 )
+position = Vector2( 1, 5 )
 scale = Vector2( 0.234375, 0.234375 )
 texture = ExtResource( 3 )
 

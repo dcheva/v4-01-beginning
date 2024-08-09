@@ -69,8 +69,10 @@ func score_count(coin = 'silver'):
 			score = score + 20
 			emit_signal("red_coin_collected")
 	
-# lives counter signal
-func hit():
+# Hurt hit bumper
+func hit(dx):
+	velocity.x = 2 * dx * speed
+	velocity.y = -2 * speed
 	lives -= 1
 	$Blood.show()
 	$Timer.start()

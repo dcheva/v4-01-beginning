@@ -19,5 +19,11 @@ func _physics_process(_delta):
 		direction = direction * -1
 		$RayCast2D.position.x *= -1
 
+# Hurt hit bumper
 func _on_CollisionChecker_body_entered(body):
-	body.hit()
+	var x1 = body.get("global_position").x
+	var x0 = global_position.x
+	var dx = 1
+	if x1 < x0: 
+		dx = -1
+	body.hit(dx)
