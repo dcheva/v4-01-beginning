@@ -14,4 +14,4 @@
 - Emitting signals from a Coins collection
 - Displaying the Player’s Lives
 - Turning the Player Red on Getting Hurt
-
+- Creating the Title Screen
