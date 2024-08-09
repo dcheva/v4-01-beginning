@@ -12,6 +12,10 @@ var score = 0
 var lives = 3
 var level_finished = false
 
+signal silver_coin_collected
+signal gold_coin_collected
+signal red_coin_collected
+
 func _physics_process(_delta):
 	
 	# bounce simulation 
