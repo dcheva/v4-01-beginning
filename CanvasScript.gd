@@ -23,9 +23,9 @@ func _update_hud_life():
 		0:
 			$Heart3.hide()
 			$Heart2.hide()
-			$Heart1.hide() 
-			get_tree().change_scene("res://Scene.tscn") # Game over   
-			
+			$Heart1.hide()
+			print("Game over!")
+			get_tree().change_scene("res://Scene.tscn") 
 
 func _on_Player_Node_silver_coin_collected():
 	_update_hud_score()

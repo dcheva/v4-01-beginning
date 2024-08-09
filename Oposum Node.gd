@@ -19,5 +19,5 @@ func _physics_process(_delta):
 		direction = direction * -1
 		$RayCast2D.position.x *= -1
 
-func _on_CollisionChecker_body_entered(_body):
-	_body.hit()
+func _on_CollisionChecker_body_entered(body):
+	body.hit()

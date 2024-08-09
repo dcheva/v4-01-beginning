@@ -8,9 +8,10 @@ var velocity = Vector2(0,0)
 var speed = 300
 var jump_speed = -1000
 var gravity = 3000
+var level_finished = false
+
 var score = 0
 var lives = 3
-var level_finished = false
 
 signal silver_coin_collected
 signal gold_coin_collected
@@ -73,5 +74,5 @@ func hit():
 # level finished signal
 func _on_Level_Area_body_entered(_body):
 	if level_finished:
-		prints("Level finished with score: ", score, "Lives: ", lives)
+		print("Level finished with score: %s,Lives: %s" % [score, lives])
 		get_tree().change_scene("res://Scene.tscn") 
