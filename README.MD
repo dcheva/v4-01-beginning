@@ -12,6 +12,7 @@
 ## Part IV Game Enhancements and Export
 - Start 9. Game GUI
 - Emitting signals from a Coins collection
-- Displaying the Player�s Lives
+- Displaying the Player's Lives
 - Turning the Player Red on Getting Hurt
 - Creating the Title Screen
+- Фикс бага триггера. Альт-Ентер для фулскрина. Фикс бага текстур. Анимация повреждений и смерти и сообщения над пешкой.
