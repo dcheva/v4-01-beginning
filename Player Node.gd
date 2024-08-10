@@ -13,6 +13,7 @@ var level_finished = false
 var score = 0
 var lives = 3
 var disabled = false
+var died = false
 
 signal silver_coin_collected
 signal gold_coin_collected
@@ -34,8 +35,10 @@ func _physics_process(_delta):
 	#if is_on_wall():
 	#	velocity.x = -velocity.x
 	
+	# @TODO FSM here
+	if died: _animation_player.play("Dead")
 	# controls
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	elif Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_speed
 		_animation_player.play("Jump")
 	elif Input.is_action_pressed("left_arrow"):
@@ -76,8 +79,7 @@ func score_count(coin = 'silver'):
 	
 # Hurt hit bumper
 func hit(dx):
-	print(disabled)
-	if disabled == false:
+	if disabled == false and died == false:
 		velocity.x = 2 * dx * speed
 		velocity.y = -2 * speed
 		lives -= 1
@@ -94,5 +96,6 @@ func _on_Timer_timeout():
 # level finished
 func _on_Level_Area_body_entered(_body):
 	if level_finished:
+		# @TODO Level Finished Titles here
 		print("Level finished with score: %s,Lives: %s" % [score, lives])
 		get_tree().change_scene("res://Scene.tscn")

@@ -11,7 +11,7 @@ func _on_Red_Coin_Node8_open_the_door():
 	$"Player Node/Open the Door/AnimationPlayer".play("Go")
 
 func _on_CanvasLayer_game_over():
-	$"Player Node".disabled = true
+	$"Player Node".died = true
 	$"Player Node/Game Over/Restart".start()
 	$"Player Node/Game Over".show()
 	$"Player Node/Game Over/AnimationPlayer".play("Go")
