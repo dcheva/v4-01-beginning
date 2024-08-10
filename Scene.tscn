@@ -1787,8 +1787,7 @@ margin_top = 62.0
 margin_right = 1024.0
 margin_bottom = 666.0
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
@@ -1865,6 +1864,9 @@ margin_bottom = 167.0
 custom_fonts/font = SubResource( 63 )
 text = " quit "
 icon_align = 1
+
+[node name="Camera2D" type="Camera2D" parent="Control"]
+position = Vector2( 512, 301 )
 
 [connection signal="gold_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_gold_coin_collected"]
 [connection signal="lives_count" from="Player Node" to="CanvasLayer" method="_on_Player_Node_lives_count"]

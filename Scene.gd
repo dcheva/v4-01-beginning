@@ -30,5 +30,13 @@ func _on_Quit_pressed():
 	get_tree().quit()
 
 func _on_Player_Node_pause():
-	$Control.visible = !$Control.visible
-		
+	if $Control.visible:
+		$Control.visible = false
+		$Control/Camera2D.current = false
+		$CanvasLayer.visible = true
+		$"Player Node/Camera2D".current = true
+	else:
+		$Control.visible = true
+		$Control/Camera2D.current = true
+		$CanvasLayer.visible = false
+		$"Player Node/Camera2D".current = false

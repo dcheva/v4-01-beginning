@@ -16,3 +16,4 @@
 - Turning the Player Red on Getting Hurt
 - Фикс бага триггера. Альт-Ентер для фулскрина. Фикс бага текстур. Анимация повреждений и смерти и сообщения над пешкой.
 - Creating the Title Screen
+- Adding Music to the Game
