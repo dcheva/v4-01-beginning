@@ -19,6 +19,7 @@ signal silver_coin_collected
 signal gold_coin_collected
 signal red_coin_collected
 signal lives_count
+signal pause
 
 func _ready():
 	$Blood.hide()
@@ -28,6 +29,9 @@ func _physics_process(_delta):
 	# Move it to Settings scene
 	if Input.is_action_just_pressed("toggle_fullscreen"):
 		OS.window_fullscreen = !OS.window_fullscreen
+		
+	if Input.is_action_just_pressed("player_paused"):
+		emit_signal("pause")
 	
 	# bounce simulation 
 	if is_on_ceiling():

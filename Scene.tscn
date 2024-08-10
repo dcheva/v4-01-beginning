@@ -1786,6 +1786,10 @@ anchor_right = 1.0
 margin_top = 62.0
 margin_right = 1024.0
 margin_bottom = 666.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 anchor_left = 0.5
@@ -1864,6 +1868,7 @@ icon_align = 1
 
 [connection signal="gold_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_gold_coin_collected"]
 [connection signal="lives_count" from="Player Node" to="CanvasLayer" method="_on_Player_Node_lives_count"]
+[connection signal="pause" from="Player Node" to="." method="_on_Player_Node_pause"]
 [connection signal="red_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_red_coin_collected"]
 [connection signal="silver_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_silver_coin_collected"]
 [connection signal="timeout" from="Player Node/Game Over/Restart" to="." method="_on_Restart_timeout"]

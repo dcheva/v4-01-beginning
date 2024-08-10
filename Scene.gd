@@ -4,6 +4,7 @@ func _ready():
 	$"Level Area".hide()
 	$"Player Node/Open the Door".hide()
 	$"Player Node/Game Over".hide()
+	$Control.hide()
 
 func _on_Red_Coin_Node8_open_the_door():
 	$"Level Area".show()
@@ -27,3 +28,7 @@ func _on_Settings_pressed():
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+func _on_Player_Node_pause():
+	$Control.visible = !$Control.visible
+		
