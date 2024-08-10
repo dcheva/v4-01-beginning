@@ -1527,7 +1527,9 @@ extents = Vector2( 18, 29 )
 [sub_resource type="Theme" id=59]
 
 [sub_resource type="DynamicFont" id=60]
-size = 32
+size = 64
+outline_size = 1
+outline_color = Color( 0, 0, 0, 0.533333 )
 font_data = ExtResource( 14 )
 
 [node name="Game Level" type="Node2D"]
@@ -1793,29 +1795,32 @@ anchor_right = 0.5
 margin_left = -552.0
 margin_right = 552.0
 margin_bottom = 738.0
-color = Color( 0.901961, 0.819608, 0.509804, 0.839216 )
+color = Color( 0.490196, 0.101961, 0, 0.839216 )
 
 [node name="CenterContainer" type="CenterContainer" parent="Control"]
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
+anchor_bottom = 1.0
 margin_left = -512.5
 margin_right = 512.5
 margin_bottom = 662.0
 theme = SubResource( 59 )
 
 [node name="Label" type="Label" parent="Control/CenterContainer"]
-margin_left = 480.0
-margin_top = 300.0
+margin_left = 257.0
+margin_top = 295.0
+margin_right = 768.0
+margin_bottom = 367.0
 theme = ExtResource( 15 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 0.533333 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_constants/shadow_as_outline = 1
 custom_fonts/font = SubResource( 60 )
-text = "111
-222
-333"
+text = "Happy Freaks"
 align = 1
+valign = 1
 
 [connection signal="gold_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_gold_coin_collected"]
 [connection signal="lives_count" from="Player Node" to="CanvasLayer" method="_on_Player_Node_lives_count"]
