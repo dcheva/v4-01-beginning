@@ -18,3 +18,12 @@ func _on_CanvasLayer_game_over():
 	
 func _on_Restart_timeout():
 	get_tree().change_scene("res://Scene.tscn")
+
+func _on_Play_pressed():
+	get_tree().change_scene("res://Scene.tscn")
+
+func _on_Settings_pressed():
+	OS.window_fullscreen = !OS.window_fullscreen
+
+func _on_Quit_pressed():
+	get_tree().quit()
