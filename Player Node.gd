@@ -24,6 +24,10 @@ func _ready():
 
 func _physics_process(_delta):
 	
+	# Move it to Settings scene
+	if Input.is_action_just_pressed("toggle_fullscreen"):
+		OS.window_fullscreen = !OS.window_fullscreen
+	
 	# bounce simulation 
 	if is_on_ceiling():
 		velocity.y = -velocity.y 
