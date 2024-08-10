@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=2]
+[gd_scene load_steps=74 format=2]
 
 [ext_resource path="res://tileset.png" type="Texture" id=1]
 [ext_resource path="res://Player Node.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://sunnyland/live.png" type="Texture" id=11]
 [ext_resource path="res://sunnyland/door.png" type="Texture" id=12]
 [ext_resource path="res://Scene.gd" type="Script" id=13]
+[ext_resource path="res://GUI/fonts/kenvector_future_thin.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://theme.tres" type="Theme" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1522,6 +1524,12 @@ tracks/1/keys = {
 [sub_resource type="RectangleShape2D" id=55]
 extents = Vector2( 18, 29 )
 
+[sub_resource type="Theme" id=59]
+
+[sub_resource type="DynamicFont" id=60]
+size = 32
+font_data = ExtResource( 14 )
+
 [node name="Game Level" type="Node2D"]
 position = Vector2( 0, -62 )
 script = ExtResource( 13 )
@@ -1616,7 +1624,12 @@ anims/Go = SubResource( 58 )
 wait_time = 2.0
 one_shot = true
 
-[node name="Coins" type="Node" parent="."]
+[node name="Coins" type="Node2D" parent="."]
+position = Vector2( 0, 60 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Silver Coin" parent="Coins" instance=ExtResource( 5 )]
 position = Vector2( 488, -78 )
@@ -1762,6 +1775,47 @@ custom_fonts/font = SubResource( 56 )
 text = "0"
 align = 2
 valign = 1
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 488.0
+margin_top = -2.0
+margin_right = 528.0
+margin_bottom = 38.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -552.0
+margin_right = 552.0
+margin_bottom = 738.0
+color = Color( 0.901961, 0.819608, 0.509804, 0.839216 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -512.5
+margin_right = 512.5
+margin_bottom = 662.0
+theme = SubResource( 59 )
+
+[node name="Label" type="Label" parent="Control/CenterContainer"]
+margin_left = 480.0
+margin_top = 300.0
+theme = ExtResource( 15 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.533333 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/shadow_as_outline = 1
+custom_fonts/font = SubResource( 60 )
+text = "111
+222
+333"
+align = 1
 
 [connection signal="gold_coin_collected" from="Player Node" to="CanvasLayer" method="_on_Player_Node_gold_coin_collected"]
 [connection signal="lives_count" from="Player Node" to="CanvasLayer" method="_on_Player_Node_lives_count"]
